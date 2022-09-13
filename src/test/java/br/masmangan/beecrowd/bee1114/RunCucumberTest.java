@@ -18,36 +18,14 @@
  * Please visit Gherkin By Example at https://github.com/gherkin-by-example 
  * if you need additional information or have any questions.
  */
-package br.masmangan.beecrowd.bee1001;
+package br.masmangan.beecrowd.bee1114;
 
-import br.masmangan.beecrowd.bee1001.Calculator;
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
+import io.cucumber.junit.Cucumber;
+import io.cucumber.junit.CucumberOptions;
+import org.junit.runner.RunWith;
 
-import static org.junit.Assert.*;
+@RunWith(Cucumber.class)
+@CucumberOptions(plugin = {"pretty"})
+public class RunCucumberTest {
 
-public class CalculatorSteps {
-
-	private final Calculator calc = new Calculator();
-	private int actual;
-
-	@Given("first number is {int}")
-	public void givenTheFirstNumberIs(int a) {
-		calc.setA(a);
-	}
-
-	@Given("second number is {int}")
-	public void givenTheSecondNumberIs(int b) {
-		calc.setB(b);
-	}
-
-	@When("two numbers are added")
-	public void whenTheTwoNumbersAreAdded() {
-		actual = calc.getSum();
-	}
-
-	@Then("result should be {int}")
-	public void thenTheResultShouldBe(int x) {
-		assertEquals(x, actual);
-	}}
+}

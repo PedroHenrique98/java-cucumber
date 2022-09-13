@@ -1,4 +1,4 @@
-package br.masmangan.beecrowd.bee1007;
+package br.masmangan.beecrowd.bee1114;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -9,7 +9,7 @@ import java.nio.charset.StandardCharsets;
 
 import static org.junit.Assert.assertEquals;
 
-public class Bee1007Steps {
+public class Bee1114Steps {
 
     private String input;
     private String actual;
